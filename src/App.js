@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './compnent/navbar';
+import Sidebar from './compnent/sidebar';
+import Dashboard from './compnent/Dashboard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full h-screen bg-black  flex flex-col justify-start items-start">
+
+      <Navbar/>
+      <div className='w-full h-full flex    '>
+
+        <Sidebar/>
+        <Dashboard/>
+        </div> 
+
     </div>
   );
 }
